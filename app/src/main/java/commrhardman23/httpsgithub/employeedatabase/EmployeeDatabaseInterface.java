@@ -50,9 +50,9 @@ public class EmployeeDatabaseInterface extends AppCompatActivity {
         SQLiteDatabase db;
         String name;
         String position;
-        String employeenum;
+        String employeeNum;
         String wage;
-        ContentValues addvalues = new ContentValues();
+        ContentValues addValues = new ContentValues();
 
 
 
@@ -74,15 +74,15 @@ public class EmployeeDatabaseInterface extends AppCompatActivity {
                  */
                 name = edtxtName.getText().toString();
                 position= edtxtPosition.getText().toString();
-                employeenum = edtxtEmployeeNum.getText().toString();
+                employeeNum = edtxtEmployeeNum.getText().toString();
                 wage = edtxtWage.getText().toString();
 
-                addvalues.put("NAME", name);
-                addvalues.put("POSITION", position);
-                addvalues.put("EMPLOYEE_NUM", employeenum);
-                addvalues.put("WAGE", wage);
+                addValues.put("NAME", name);
+                addValues.put("POSITION", position);
+                addValues.put("EMPLOYEE_NUM", employeeNum);
+                addValues.put("WAGE", wage);
 
-                employeeDatabaseHelper.insertElement(db,addvalues);
+                employeeDatabaseHelper.insertElement(db,addValues);
                 txtvwResult.setText("The element has been added successfully");
             }
 

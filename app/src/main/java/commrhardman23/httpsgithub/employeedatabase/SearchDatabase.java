@@ -320,7 +320,7 @@ public class SearchDatabase extends AppCompatActivity {
        try {
            db = employeeDatabaseHelper.getWritableDatabase();
            numRowsDeleted = employeeDatabaseHelper.deleteElement(db,whereToDelete,elementsToDelete);
-           txtvwResult.setText(numRowsDeleted + " row have been deleted");
+           txtvwResult.setText(numRowsDeleted + " row(s) have been deleted");
 
        }catch(SQLiteException e) {
 
