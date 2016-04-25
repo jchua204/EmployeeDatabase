@@ -85,7 +85,7 @@ public class EmployeeDatabaseInterface extends AppCompatActivity {
                 employeeDatabaseHelper.insertElement(db,addValues);
                 txtvwResult.setText("The element has been added successfully");
             }
-
+            db.close();
         } catch (SQLiteException e) {
             //display that the database was not found
             txtvwResult.setText("The database was not found");
